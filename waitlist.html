@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apprl — Your entire wardrobe, organised.</title>
+  <meta name="description" content="AI-powered wardrobe management. An outfit in seconds. Join the waitlist." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --espresso: #2E2A27;
+      --terracotta: #C4785A;
+      --tan: #8C7B6B;
+      --cream: #F5F2EE;
+      --cream-dark: #EDE9E3;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--espresso);
+      color: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 32px 24px 0;
+      max-width: 480px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .wordmark-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--terracotta);
+    }
+
+    .hero-content {
+      padding: 60px 0 40px;
+    }
+
+    .hero-title {
+      font-size: clamp(48px, 12vw, 64px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title span { color: var(--terracotta); }
+
+    .hero-subtitle {
+      font-size: 17px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+      max-width: 320px;
+    }
+
+    /* ── Features ── */
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 40px 0;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .feature-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      flex-shrink: 0;
+    }
+
+    /* ── Form ── */
+    .form-section {
+      background: var(--cream);
+      border-radius: 28px 28px 0 0;
+      padding: 32px 24px 48px;
+      max-width: 480px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .form-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--espresso);
+      letter-spacing: 0.3px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      background: var(--cream-dark);
+      border: none;
+      border-radius: 14px;
+      padding: 16px 18px;
+      font-size: 16px;
+      color: var(--espresso);
+      outline: none;
+      width: 100%;
+      font-family: inherit;
+    }
+
+    input::placeholder { color: var(--tan); }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--espresso);
+      color: var(--cream);
+      border: none;
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      transition: opacity 0.2s;
+    }
+
+    .submit-btn:hover { opacity: 0.88; }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .legal {
+      font-size: 11px;
+      color: var(--tan);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    .legal a { color: var(--tan); }
+
+    /* ── Success state ── */
+    .success {
+      display: none;
+      text-align: center;
+      padding: 12px 0;
+    }
+
+    .success-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .success-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--espresso);
+      margin-bottom: 6px;
+    }
+
+    .success-body {
+      font-size: 14px;
+      color: var(--tan);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="wordmark">
+      <div class="wordmark-dot"></div>
+      APPRL
+    </div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Dress<br><span>smarter.</span></h1>
+      <p class="hero-subtitle">Your entire wardrobe, organised. An outfit suggestion in seconds.</p>
+
+      <div class="features">
+        <div class="feature"><div class="feature-dot"></div>Take a photo — AI fills in the details</div>
+        <div class="feature"><div class="feature-dot"></div>Get an outfit for any occasion in seconds</div>
+        <div class="feature"><div class="feature-dot"></div>See what you actually wear (and what you don't)</div>
+        <div class="feature"><div class="feature-dot"></div>Check before you buy — store compatibility scanner</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <p class="form-label">Join the waitlist — launching soon.</p>
+
+    <div id="form-wrap">
+      <div class="form-group">
+        <input type="text" id="name" placeholder="First name" autocomplete="given-name" />
+        <input type="email" id="email" placeholder="Email address" autocomplete="email" />
+      </div>
+
+      <button class="submit-btn" id="submit-btn" onclick="joinWaitlist()">
+        Get early access →
+      </button>
+
+      <p class="legal">
+        No spam. Unsubscribe any time.<br>
+        By joining you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.
+      </p>
+    </div>
+
+    <div class="success" id="success">
+      <div class="success-icon">🤎</div>
+      <div class="success-title">You're on the list!</div>
+      <div class="success-body">We'll email you as soon as Apprl launches.</div>
+    </div>
+  </div>
+
+  <script>
+    async function joinWaitlist() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const btn = document.getElementById('submit-btn');
+
+      if (!email || !email.includes('@')) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Joining…';
+
+      try {
+        const res = await fetch('https://wardrobe-ai-app-production.up.railway.app/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, source: 'landing_page' }),
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          document.getElementById('form-wrap').style.display = 'none';
+          document.getElementById('success').style.display = 'block';
+        } else {
+          throw new Error(data.detail || 'Something went wrong.');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Get early access →';
+        alert('Something went wrong. Please try again.');
+      }
+    }
+
+    document.getElementById('email').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') joinWaitlist();
+    });
+  </script>
+
+</body>
+</html>
